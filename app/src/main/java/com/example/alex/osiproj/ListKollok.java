@@ -10,7 +10,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 public class ListKollok extends ListActivity{
-    private String[] mYearArray = { "КоллВариант1 (2015)", "КоллВариант2", "КоллВариант3" };
+    private String[] mYearArray = { "Kollol2015", "Kollok2014", "КоллВариант3" };
 
     // Создадим адаптер
     private ArrayAdapter<String> mAdapterExam;
@@ -27,6 +27,12 @@ public class ListKollok extends ListActivity{
             case 0 :
                 intent = new Intent(ListKollok.this, VarHandler.class);
                 intent.putExtra("mKeyVar", "Kollok2015"); //передаю по ключу mKey(строка), данные(можно разные типы)
+                //intent.putExtra("mNumOfQuestion", "1");
+                startActivity(intent);
+                break;
+            case 1 :
+                intent = new Intent(ListKollok.this, VarHandler.class);
+                intent.putExtra("mKeyVar", "Kollok2014"); //передаю по ключу mKey(строка), данные(можно разные типы)
                 //intent.putExtra("mNumOfQuestion", "1");
                 startActivity(intent);
                 break;

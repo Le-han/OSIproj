@@ -2,6 +2,7 @@ package com.example.alex.osiproj;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -47,20 +48,32 @@ public class VarHandler extends AppCompatActivity {
         //Log.d(TAG, "onCreate(Bundle) called");
         setContentView(R.layout.activity_var_handler);
         mQuestionTextView = (TextView) findViewById(R.id.question_text_view);
+        mQuestionTextView.setMovementMethod(new ScrollingMovementMethod()); //android:maxLines = "5"
         String strId = getIntent().getExtras().getString("mKeyVar");
         switch (strId){
             case "Kollok2015" :
                 mQuestionBank = new Question[] {
-                        new Question(R.string.V2015_1_1, R.string.A2015_1_1),
-                        new Question(R.string.V2015_1_2, R.string.A2015_1_2),
-                        new Question(R.string.V2015_1_3, R.string.A2015_1_3),
-                        new Question(R.string.V2015_1_4, R.string.A2015_1_4),
-                        new Question(R.string.V2015_1_5, R.string.A2015_1_5),
-                        new Question(R.string.V2015_1_6, R.string.A2015_1_6),
-                        new Question(R.string.V2015_1_7, R.string.A2015_1_7),
-                        new Question(R.string.V2015_1_8, R.string.A2015_1_8),
-                        new Question(R.string.V2015_1_9, R.string.A2015_1_9),
-                        new Question(R.string.V2015_1_10,R.string.A2015_1_10),
+                        new Question(R.string.KollokV2015_1_1, R.string.KollokA2015_1_1),
+                        new Question(R.string.KollokV2015_1_2, R.string.KollokA2015_1_2),
+                        new Question(R.string.KollokV2015_1_3, R.string.KollokA2015_1_3),
+                        new Question(R.string.KollokV2015_1_4, R.string.KollokA2015_1_4),
+                        new Question(R.string.KollokV2015_1_5, R.string.KollokA2015_1_5),
+                        new Question(R.string.KollokV2015_1_6, R.string.KollokA2015_1_6),
+                        new Question(R.string.KollokV2015_1_7, R.string.KollokA2015_1_7),
+                        new Question(R.string.KollokV2015_1_8, R.string.KollokA2015_1_8),
+                        new Question(R.string.KollokV2015_1_9, R.string.KollokA2015_1_9),
+                        new Question(R.string.KollokV2015_1_10,R.string.KollokA2015_1_10),
+
+                };
+                break;
+            case "Kollok2014" :
+                mQuestionBank = new Question[] {
+                        new Question(R.string.KollokV2014_1_1, R.string.KollokA2014_1_1),
+                        new Question(R.string.KollokV2014_1_2, R.string.KollokA2014_1_2),
+                        new Question(R.string.KollokV2014_1_3, R.string.KollokA2014_1_3),
+                        new Question(R.string.KollokV2014_1_4, R.string.KollokA2014_1_4),
+                        new Question(R.string.KollokV2014_1_5, R.string.KollokA2014_1_5),
+                        new Question(R.string.KollokV2014_1_6, R.string.KollokA2014_1_6)
 
                 };
                 break;
