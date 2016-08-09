@@ -8,12 +8,11 @@
               android:paddingLeft="@dimen/activity_horizontal_margin"
               android:paddingRight="@dimen/activity_horizontal_margin"
               android:paddingTop="@dimen/activity_vertical_margin"
-
               tools:context=".MainActivity">
     <TextView
         android:id="@id/android:empty"
         android:layout_width="match_parent"
-        android:layout_height="128dp"
+        android:layout_height="wrap_content"
         android:text="@string/empty"
         android:padding="24dp"
         android:textColor="#ff0008"
@@ -28,7 +27,8 @@
         android:name="com.example.alex.osiproj.SingleListFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="24dp"
         tools:layout="@android:layout/list_content">
     </fragment>
+
 </LinearLayout>

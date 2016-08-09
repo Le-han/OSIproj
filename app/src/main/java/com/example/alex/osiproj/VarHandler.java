@@ -65,20 +65,32 @@ public class VarHandler extends AppCompatActivity {
                 };
                 break;
 
-            case "Exam2014" :
+            case "Exam2014_1" :
                 mQuestionBank = new Question[] {
                         new Question(R.string.ExamV2014_1_1, R.string.ExamA2014_1_1),
                         new Question(R.string.ExamV2014_1_2, R.string.ExamA2014_1_2),
-                        new Question(R.string.ExamV2014_1_3, R.string.ExamA2014_1_3)
-                        /*
+                        new Question(R.string.ExamV2014_1_3, R.string.ExamA2014_1_3),
                         new Question(R.string.ExamV2014_1_4, R.string.ExamA2014_1_4),
                         new Question(R.string.ExamV2014_1_5, R.string.ExamA2014_1_5),
                         new Question(R.string.ExamV2014_1_6, R.string.ExamA2014_1_6),
                         new Question(R.string.ExamV2014_1_7, R.string.ExamA2014_1_7),
                         new Question(R.string.ExamV2014_1_8, R.string.ExamA2014_1_8),
                         new Question(R.string.ExamV2014_1_9, R.string.ExamA2014_1_9),
-                        new Question(R.string.ExamV2014_1_10,R.string.ExamA2014_1_10),
-                        */
+                        new Question(R.string.ExamV2014_1_10,R.string.ExamA2014_1_10)
+                };
+                break;
+            case "Exam2014_2" :
+                mQuestionBank = new Question[] {
+                        new Question(R.string.ExamV2014_2_1, R.string.ExamA2014_2_1),
+                        new Question(R.string.ExamV2014_2_2, R.string.ExamA2014_2_2),
+                        new Question(R.string.ExamV2014_2_3, R.string.ExamA2014_2_3),
+                        new Question(R.string.ExamV2014_2_4, R.string.ExamA2014_2_4),
+                        new Question(R.string.ExamV2014_2_5, R.string.ExamA2014_2_5),
+                        new Question(R.string.ExamV2014_2_6, R.string.ExamA2014_2_6),
+                        new Question(R.string.ExamV2014_2_7, R.string.ExamA2014_2_7),
+                        new Question(R.string.ExamV2014_2_8, R.string.ExamA2014_2_8),
+                        new Question(R.string.ExamV2014_2_9, R.string.ExamA2014_2_9),
+                        new Question(R.string.ExamV2014_2_10,R.string.ExamA2014_2_10)
                 };
                 break;
             default: Toast.makeText(getApplicationContext(), "will work later", Toast.LENGTH_SHORT).show();

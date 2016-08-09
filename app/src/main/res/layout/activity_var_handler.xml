@@ -18,7 +18,7 @@
             android:gravity="center_vertical"
             android:padding="36dp"
             android:textStyle="bold"
-            android:textSize="20sp"
+            android:textSize="16sp"
             tools:text = "Question"
             android:layout_marginBottom="12dp"/>
         <LinearLayout
