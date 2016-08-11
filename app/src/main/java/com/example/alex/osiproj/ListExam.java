@@ -6,6 +6,8 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -18,6 +20,9 @@ public class ListExam extends ListActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // Убираем панель уведомлений
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         mAdapterExam = new ArrayAdapter<String>(this, R.layout.activity_list_exam, mYearArray);
         setListAdapter(mAdapterExam);
     }
@@ -48,6 +53,11 @@ public class ListExam extends ListActivity {
             case 4 :
                 intent = new Intent(ListExam.this, VarHandler.class);
                 intent.putExtra("mKeyVar", "Exam2013_1");
+                startActivity(intent);
+                break;
+            case 5 :
+                intent = new Intent(ListExam.this, VarHandler.class);
+                intent.putExtra("mKeyVar", "Exam2013_2");
                 startActivity(intent);
                 break;
             default:

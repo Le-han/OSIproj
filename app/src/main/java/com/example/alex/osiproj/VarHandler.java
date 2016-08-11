@@ -7,6 +7,8 @@ import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ScrollView;
@@ -49,6 +51,11 @@ public class VarHandler extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //Log.d(TAG, "onCreate(Bundle) called");
+        // Убираем панель уведомлений
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        // Убираем заголовок
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_var_handler);
 
         String strId = getIntent().getExtras().getString("mKeyVar");
@@ -136,6 +143,20 @@ public class VarHandler extends AppCompatActivity {
                         new Question(R.string.ExamV2013_1_10,R.string.ExamA2013_1_10)
                 };
                 break;
+            case "Exam2013_2" :
+                mQuestionBank = new Question[] {
+                        new Question(R.string.ExamV2013_2_1, R.string.ExamA2013_2_1),
+                        new Question(R.string.ExamV2013_2_2, R.string.ExamA2013_2_2),
+                        new Question(R.string.ExamV2013_2_3, R.string.ExamA2013_2_3),
+                        new Question(R.string.ExamV2013_2_4, R.string.ExamA2013_2_4),
+                        new Question(R.string.ExamV2013_2_5, R.string.ExamA2013_2_5),
+                        new Question(R.string.ExamV2013_2_6, R.string.ExamA2013_2_6),
+                        new Question(R.string.ExamV2013_2_7, R.string.ExamA2013_2_7),
+                        new Question(R.string.ExamV2013_2_8, R.string.ExamA2013_2_8),
+                        new Question(R.string.ExamV2013_2_9, R.string.ExamA2013_2_9),
+                        new Question(R.string.ExamV2013_2_10,R.string.ExamA2013_2_10)
+                };
+                break;
 
             default: Toast.makeText(getApplicationContext(), "will work later", Toast.LENGTH_SHORT).show();
         }
@@ -145,7 +166,6 @@ public class VarHandler extends AppCompatActivity {
         mQuestionTextView.setMovementMethod(new ScrollingMovementMethod());
         mAnswerTextView.setMovementMethod(new ScrollingMovementMethod());
         //PREV
-
 
         mPrevButton = (ImageButton)findViewById(R.id.prev_button);
         mPrevButton.setOnClickListener(new  View.OnClickListener(){
