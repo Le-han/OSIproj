@@ -1,12 +1,15 @@
 package com.example.alex.osiproj;
 
+import android.support.v4.view.ScrollingView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -47,8 +50,7 @@ public class VarHandler extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         //Log.d(TAG, "onCreate(Bundle) called");
         setContentView(R.layout.activity_var_handler);
-        mQuestionTextView = (TextView) findViewById(R.id.question_text_view);
-        mQuestionTextView.setMovementMethod(new ScrollingMovementMethod()); //android:maxLines = "5"
+
         String strId = getIntent().getExtras().getString("mKeyVar");
         switch (strId){
             case "Kollok2015" :
@@ -106,9 +108,45 @@ public class VarHandler extends AppCompatActivity {
                         new Question(R.string.ExamV2014_2_10,R.string.ExamA2014_2_10)
                 };
                 break;
+            case "Retake2014" :
+                mQuestionBank = new Question[] {
+                        new Question(R.string.RetakeV2014_1_1, R.string.RetakeA2014_1_1),
+                        new Question(R.string.RetakeV2014_1_2, R.string.RetakeA2014_1_2),
+                        new Question(R.string.RetakeV2014_1_3, R.string.RetakeA2014_1_3),
+                        new Question(R.string.RetakeV2014_1_4, R.string.RetakeA2014_1_4),
+                        new Question(R.string.RetakeV2014_1_5, R.string.RetakeA2014_1_5),
+                        new Question(R.string.RetakeV2014_1_6, R.string.RetakeA2014_1_6),
+                        new Question(R.string.RetakeV2014_1_7, R.string.RetakeA2014_1_7),
+                        new Question(R.string.RetakeV2014_1_8, R.string.RetakeA2014_1_8),
+                        new Question(R.string.RetakeV2014_1_9, R.string.RetakeA2014_1_9),
+                        new Question(R.string.RetakeV2014_1_10,R.string.RetakeA2014_1_10)
+                };
+                break;
+            case "Exam2013_1" :
+                mQuestionBank = new Question[] {
+                        new Question(R.string.ExamV2013_1_1, R.string.ExamA2013_1_1),
+                        new Question(R.string.ExamV2013_1_2, R.string.ExamA2013_1_2),
+                        new Question(R.string.ExamV2013_1_3, R.string.ExamA2013_1_3),
+                        new Question(R.string.ExamV2013_1_4, R.string.ExamA2013_1_4),
+                        new Question(R.string.ExamV2013_1_5, R.string.ExamA2013_1_5),
+                        new Question(R.string.ExamV2013_1_6, R.string.ExamA2013_1_6),
+                        new Question(R.string.ExamV2013_1_7, R.string.ExamA2013_1_7),
+                        new Question(R.string.ExamV2013_1_8, R.string.ExamA2013_1_8),
+                        new Question(R.string.ExamV2013_1_9, R.string.ExamA2013_1_9),
+                        new Question(R.string.ExamV2013_1_10,R.string.ExamA2013_1_10)
+                };
+                break;
+
             default: Toast.makeText(getApplicationContext(), "will work later", Toast.LENGTH_SHORT).show();
         }
+        //SCROLL
+        mQuestionTextView = (TextView)findViewById(R.id.question_text_view);
+        mAnswerTextView = (TextView)findViewById(R.id.answer_text_view);
+        mQuestionTextView.setMovementMethod(new ScrollingMovementMethod());
+        mAnswerTextView.setMovementMethod(new ScrollingMovementMethod());
         //PREV
+
+
         mPrevButton = (ImageButton)findViewById(R.id.prev_button);
         mPrevButton.setOnClickListener(new  View.OnClickListener(){
             @Override
@@ -126,6 +164,7 @@ public class VarHandler extends AppCompatActivity {
                 }
             }
         });
+
         //NEXT
         mNextButton = (ImageButton)findViewById(R.id.next_button);
         mNextButton.setOnClickListener(new View.OnClickListener() {
@@ -156,6 +195,7 @@ public class VarHandler extends AppCompatActivity {
                 mShowAnswer.setVisibility(View.INVISIBLE);
             }
         });
+
         /*
         if (savedInstanceState != null) {
             mCurrentIndex = savedInstanceState.getInt(KEY_INDEX, 0);

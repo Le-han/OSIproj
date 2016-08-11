@@ -11,7 +11,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 public class ListExam extends ListActivity {
-    private String[] mYearArray = { "Ex2015", "Ex2014_1", "Ex2014_2", "ЭкзВариант4" };
+    private String[] mYearArray = { "Ex2015", "Ex2014_1", "Ex2014_2", "Retake2014", "Ex2013_1", "Ex2013_2" };
 
     // Создадим адаптер
     private ArrayAdapter<String> mAdapterExam;
@@ -38,6 +38,16 @@ public class ListExam extends ListActivity {
             case 2 :
                 intent = new Intent(ListExam.this, VarHandler.class);
                 intent.putExtra("mKeyVar", "Exam2014_2");
+                startActivity(intent);
+                break;
+            case 3 :
+                intent = new Intent(ListExam.this, VarHandler.class);
+                intent.putExtra("mKeyVar", "Retake2014");
+                startActivity(intent);
+                break;
+            case 4 :
+                intent = new Intent(ListExam.this, VarHandler.class);
+                intent.putExtra("mKeyVar", "Exam2013_1");
                 startActivity(intent);
                 break;
             default:
