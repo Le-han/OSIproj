@@ -8,8 +8,9 @@
 
     <!-- Product Name -->
     <TextView android:id="@+id/product_name"
-              android:layout_width="fill_parent"
+              android:layout_width="match_parent"
               android:layout_height="wrap_content"
+              android:maxLines="1"
               android:padding="10dip"
               android:textSize="16dip"
               android:textStyle="bold"/>

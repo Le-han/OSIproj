@@ -21,7 +21,11 @@
         </activity>
         <activity android:name=".VarHandler">
         </activity>
-        <activity android:name=".DictionaryTermin">
+        <activity
+            android:name=".DictionaryTermin"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity android:name=".TerminHandler">
         </activity>
     </application>
 

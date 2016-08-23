@@ -38,6 +38,7 @@ public class SingleListFragment extends ListFragment {
             case 1 :
                 intent = new Intent(getActivity().getApplicationContext(), ListKollok.class);
                 startActivity(intent);
+                break;
             case 2 :
                 intent = new Intent(getActivity().getApplicationContext(), DictionaryTermin.class);
                 startActivity(intent);
