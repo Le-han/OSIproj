@@ -1,5 +1,7 @@
 package com.example.alex.osiproj;
 
+//Base for SingleListFragment
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;

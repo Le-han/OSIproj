@@ -2,7 +2,7 @@
     <string name="app_name">OSIproj</string>
     <string name="empty">OSIproj</string>
 
-      <!-- Коментарий -->
+    <!-- Коментарий -->
 
     <string name="true_button">True</string>
     <string name="false_button">False</string>
@@ -303,9 +303,6 @@ int main{
         и несколько(возможно одна) таблица второго уровня. Соответственно при смене процессов нет необходимости в "перемещении" всей таблицы страниц.
     </string>
     <string name="ExamA2013_2_10">Ответ: Фрагментация содержимого файла по диску.</string>
-
-
-
 
 
 </resources>

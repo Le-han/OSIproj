@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 
 public class SingleListFragment extends ListFragment {
-    final String[] Names = new String[]{"Экзамены прошлых лет", "Коллоквиумы прошлых лет", "О программе"};
+    final String[] Names = new String[]{"Экзамены прошлых лет", "Коллоквиумы прошлых лет","Словарь", "О программе"};
     //метод onActivityCreated() свяжет массив с адаптером и передаст его списочному фрагменту.
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
@@ -37,6 +37,9 @@ public class SingleListFragment extends ListFragment {
                 break;
             case 1 :
                 intent = new Intent(getActivity().getApplicationContext(), ListKollok.class);
+                startActivity(intent);
+            case 2 :
+                intent = new Intent(getActivity().getApplicationContext(), DictionaryTermin.class);
                 startActivity(intent);
                 break;
             default:
