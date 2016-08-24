@@ -8,21 +8,27 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+
+        <activity android:name=".MainActivity"
+                  android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ListExam">
+        <activity android:name=".ListExam"
+                  android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".ListKollok">
+        <activity android:name=".ListKollok"
+                  android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".VarHandler">
+        <activity android:name=".VarHandler"
+                  android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".DictionaryTermin"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden">
         </activity>
         <activity android:name=".TerminHandler">

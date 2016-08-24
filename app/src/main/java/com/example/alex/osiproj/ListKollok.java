@@ -12,7 +12,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 public class ListKollok extends ListActivity{
-    private String[] mYearArray = { "Kollol2015", "Kollok2014", "КоллВариант3" };
+    private String[] mYearArray = { "Kollol2015", "Kollok2014" };
 
     // Создадим адаптер
     private ArrayAdapter<String> mAdapterExam;
