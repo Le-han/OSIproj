@@ -13,7 +13,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 public class ListExam extends ListActivity {
-    private String[] mYearArray = { "Ex2015", "Ex2014_1", "Ex2014_2", "Retake2014", "Ex2013_1", "Ex2013_2" };
+    private String[] mYearArray = {"Ex2014_1", "Ex2014_2", "Retake2014", "Ex2013_1", "Ex2013_2" };
 
     // Создадим адаптер
     private ArrayAdapter<String> mAdapterExam;
@@ -30,32 +30,29 @@ public class ListExam extends ListActivity {
         //super.onListItemClick(l, v, position, id);
         Intent intent;
         switch (position) {
+
             case 0 :
-                Toast.makeText(getApplicationContext(),
-                        "Не нашел вариант экзамена за 2015 год, пожалуйста, отправьте его нам в ВК", Toast.LENGTH_SHORT).show();
-                break;
-            case 1 :
                 intent = new Intent(ListExam.this, VarHandler.class);
                 intent.putExtra("mKeyVar", "Exam2014_1"); //передаю по ключу mKey(строка), данные(можно разные типы)
                 //intent.putExtra("mNumOfQuestion", "1");
                 startActivity(intent);
                 break;
-            case 2 :
+            case 1 :
                 intent = new Intent(ListExam.this, VarHandler.class);
                 intent.putExtra("mKeyVar", "Exam2014_2");
                 startActivity(intent);
                 break;
-            case 3 :
+            case 2 :
                 intent = new Intent(ListExam.this, VarHandler.class);
                 intent.putExtra("mKeyVar", "Retake2014");
                 startActivity(intent);
                 break;
-            case 4 :
+            case 3 :
                 intent = new Intent(ListExam.this, VarHandler.class);
                 intent.putExtra("mKeyVar", "Exam2013_1");
                 startActivity(intent);
                 break;
-            case 5 :
+            case 4 :
                 intent = new Intent(ListExam.this, VarHandler.class);
                 intent.putExtra("mKeyVar", "Exam2013_2");
                 startActivity(intent);
